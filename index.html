@@ -26,8 +26,8 @@
     <button class="btn btn-success" id="save">save</button>
     <button class="btn btn-success" id="clear">clear</button>
     <button class="btn btn-success" id="download">download</button>
-    <button class="btn btn-success" id="undo">undo</button>
-    <button class="btn btn-success" id="redo">redo</button>
+    <button class="btn btn-success" id="back-step">undo</button>
+    <button class="btn btn-success" id="next-step">redo</button>
     <canvas
       class="canvas"
       id="canvas-real"
@@ -50,6 +50,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <!--function scripts-->
     <script src="./canvas-common.js"></script>
     <script src="./drawing-line.js"></script>
     <script src="./drawing-rectangle.js"></script>
@@ -59,7 +60,7 @@
     <script src="./clear.js"></script>
     <script src="./download.js"></script>
     <script src="./undo.js"></script>
-    <script src="./redo.js"></script>
+
     <script type="text/javascript">
       //default drawing line
       currentFunction = new DrawingLine(contextReal, contextDraft);
@@ -86,15 +87,8 @@
       //Download
       $("#download").click(function () {
         currentFunction = new download(contextReal, contextDraft);
-      }); 
-      //Redo
-      $("#redo").click(function () {
-        currentFunction = new redo(contextReal, contextDraft);
-      }); 
-      //Undo
-      $("#undo").click(function () {
-        currentFunction = new undo(contextReal, contextDraft);
-      });             
+      });      
     </script>
   </body>
 </html>
+

@@ -26,7 +26,8 @@ class DrawingRectangle extends PaintFunction {
         this.origX,
         this.origY,
         coord[0] - this.origX,
-        coord[1] - this.origY
+        coord[1] - this.origY,
+        push() //for redo/ undo
       );
     }
     onMouseLeave() {}
