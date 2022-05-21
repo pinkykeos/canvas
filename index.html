@@ -64,6 +64,10 @@
     <script type="text/javascript">
       //default drawing line
       currentFunction = new DrawingLine(contextReal, contextDraft);
+      //drawing line
+      $("#drawing-line").click(function () {
+        currentFunction = new DrawingLine(contextReal, contextDraft);
+      });      
       //Rectangle
       $("#drawing-rectangle").click(function () {
         currentFunction = new DrawingRectangle(contextReal, contextDraft);
